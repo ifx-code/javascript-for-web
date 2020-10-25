@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OpenClassrooms</title>
+        <meta name="Description" content=""/>
+        <meta name="Keywords" content=""/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="fadilxcoder" />
+        <meta name="copyright" content="" />
+        <meta name="robots" content="index,follow"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    </head>
+    <body>
+        
+        <h3>getElementById</h3>
+        <p id="my-anchor">My content</p>
+        <hr>
+        
+        <h3>getElementsByClassName</h3>
+        <div>
+            <div class="content">Contenu 1</div>
+            <div class="content">Contenu 2</div>
+            <div class="content">Contenu 3</div>
+        </div>
+        <hr>
+        
+        <h3>getElementsByTagName</h3>
+        <div>
+            <article>Contenu 1</article>
+            <article>Contenu 2</article>
+            <article>Contenu 3</article>
+        </div>
+        <hr>
+        
+        <h3>querySelector</h3>
+        <div id="myId">
+            <p>
+                <span><a href="#">Lien 1</a></span>
+                <a href="#">Lien 2</a>
+                <span><a href="#">Lien 3</a></span>
+            </p>
+            <p class="article">
+                <span><a href="#">Lien 4</a></span>
+                <span><a href="#">Lien 5</a></span>
+                <a href="#">Lien 6</a>
+            </p>
+            <p>
+                <a href="#">Lien 7</a>
+                <span><a href="#">Lien 8</a></span>
+                <span><a href="#">Lien 9</a></span>
+            </p>
+            <p class="article">
+                <span><a href="#">Lien 10</a></span>
+                <span><a href="#">Lien 11</a></span>
+                <a href="#">Lien 12</a>
+            </p>
+        </div>
+        <hr>
+        
+        <h3>children / parentElement / nextElementSibling / previousElementSibling</h3>
+        <div id="parent">
+            <div id="previous">Précédent</div>
+            <div id="main">
+                <p>Paragraphe 1</p>
+                <p>Paragraphe 2</p>
+            </div>
+            <div id="next">Suivant</div>
+        </div>
+        <hr>
+        
+        <h3>innerHTML / textContent</h3>
+        <div id="modify-by-js">
+            <div class="html-data">
+                <p><b>This will be overridden</b></p>
+            </div>
+            <div class="content-data">
+                <p><i>Only content will change</i></p>
+            </div>
+            <div class="html-data">
+                <p><b>This will be overridden</b></p>
+            </div>
+            <div class="content-data">
+                <p><i>Only content will change</i></p>
+            </div>
+        </div>
+        <hr>
+
+        <script src="./scripts.js"></script>
+    </body>
+</html>
