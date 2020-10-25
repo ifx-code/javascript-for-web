@@ -41,3 +41,46 @@ var htmlData = elem.querySelector('.html-data');
 htmlData.innerHTML = '<small>updated text</small>';
 var contentData = elem.querySelector('.content-data');
 contentData.textContent = 'Text is being modified...';
+
+const eltClassList = document.getElementById('class-list');
+
+// Add class
+eltClassList.classList.add("class-list-2");
+
+// Remove Class
+eltClassList.classList.remove("class-list-1");
+
+// verify if element contains class
+if (eltClassList.classList.contains("class-list-2")) {
+    //console.log('class found')
+}
+
+// Replace class
+eltClassList.classList.replace("cl-contain" , "cl-contain-2");
+
+// Return HTML Collection
+var body = document.getElementsByTagName("body");
+
+// Return HTML string
+var body = document.querySelector("body");
+body.style.backgroundColor = 'cyan';
+
+// Return HTML String
+var myFormElem = document.getElementById('my-form');
+var input = myFormElem.getElementsByTagName('input');
+input = input[0]; // Convert to String
+
+input.setAttribute("type", "password");         // Change le type de l'input en un type password
+input.setAttribute("name", "my-password");      // Change le nom de l'input en my-password
+//console.log(input.getAttribute("name"));        // Retourne my-password
+
+const newElement = document.createElement('span');
+
+// Append HTML
+myFormElem.appendChild(newElement);
+
+// Remove HTML
+myFormElem.removeChild(newElement); 
+
+// Remove HTML
+// myFormElem.replaceChild(document.createElement("article"), newElement); 

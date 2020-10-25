@@ -35,4 +35,4 @@
 
 ### document.querySelector("#myId p.article > a")
 
-**Pour retourner une liste de résultats qui correspondent à la recherche que vous souhaitez **
+**Pour retourner une liste de résultats qui correspondent à la recherche que vous souhaitez**
