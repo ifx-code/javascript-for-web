@@ -37,10 +37,12 @@ const element = document.getElementById('main');
 */
 
 var elem = document.getElementById('modify-by-js');
+
 var htmlData = elem.querySelector('.html-data');
 htmlData.innerHTML = '<small>updated text</small>';
 var contentData = elem.querySelector('.content-data');
 contentData.textContent = 'Text is being modified...';
+
 
 const eltClassList = document.getElementById('class-list');
 
@@ -58,6 +60,7 @@ if (eltClassList.classList.contains("class-list-2")) {
 // Replace class
 eltClassList.classList.replace("cl-contain" , "cl-contain-2");
 
+
 // Return HTML Collection
 var body = document.getElementsByTagName("body");
 
@@ -67,6 +70,7 @@ body.style.backgroundColor = 'cyan';
 
 // Return HTML String
 var myFormElem = document.getElementById('my-form');
+
 var input = myFormElem.getElementsByTagName('input');
 input = input[0]; // Convert to String
 
