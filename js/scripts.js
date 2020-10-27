@@ -88,3 +88,15 @@ myFormElem.removeChild(newElement);
 
 // Remove HTML
 // myFormElem.replaceChild(document.createElement("article"), newElement); 
+
+input.addEventListener('input', function(e) {
+    writeOnDom(e);
+});
+
+function writeOnDom(event)
+{
+    var output = document.getElementById('output');
+    console.log(event);
+    console.log(event.target); // HTML String
+    output.innerHTML = event.target.value;
+}
