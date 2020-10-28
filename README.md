@@ -1,6 +1,7 @@
 # Resources
 
 - https://developer.mozilla.org/fr/docs/Web/Events (JS Events)
+- https://reqres.in/api/users (API)
 
 
 # Table of content
