@@ -1,15 +1,51 @@
-var request = new XMLHttpRequest();
 var url = 'https://reqres.in/api/users';
-// var url = 'https://www.prevision-meteo.ch/services/json/paris';
 
+var request = new XMLHttpRequest();
 request.open("GET", url);
 request.send();
-
-
 request.onreadystatechange = function() {
     readResponse(this);
 }
 
+// Event
+var btn = document.getElementById('submit-btn');
+btn.addEventListener('click', function(e) {
+   formProcess(e) 
+});
+
+
+function formProcess(event)
+{
+    event.preventDefault();
+    
+    var name = document.getElementById('value');
+    var jsonObj = {
+        'name' : name.value,
+        'job': 'web architect'
+    };
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    
+    // JSON.stringify -> transformer l'objet JavaScript en JSON
+    xhr.send(JSON.stringify(jsonObj));
+    
+    // This is fired every time the readyState property of the XMLHttpRequest changes.
+    xhr.onreadystatechange = function () {
+        formProcessCallback(this);
+    }
+}
+
+function formProcessCallback(obj)
+{
+    var elt = document.getElementById('result');
+    
+    if (obj.readyState == XMLHttpRequest.DONE) {
+        console.log(obj.status); // 201
+        elt.innerHTML = obj.responseText;
+    }
+}
 
 function readResponse(thisObj)
 {
@@ -26,6 +62,7 @@ function readResponse(thisObj)
     */
     
     if (thisObj.readyState == XMLHttpRequest.DONE && thisObj.status == 200) {
+        // JSON.parse -> string to JavaScript object
         var response = JSON.parse(thisObj.responseText);
         // console.log(response);
         // console.log(response.data[1].email);
