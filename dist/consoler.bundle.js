@@ -1,0 +1,1 @@
+(()=>{var o=["color: #4dbb63","background: #999588","font-size: 20px","text-shadow: 2px 2px #615e57","padding: 5px"].join(";");console.log("%cFADILXCODER",o),document.getElementById("output").innerHTML="Hello World"})();
